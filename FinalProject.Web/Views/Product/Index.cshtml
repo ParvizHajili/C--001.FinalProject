@@ -1,0 +1,15 @@
+﻿
+@model List<Product>
+
+<h1>Codinarium</h1>
+@* 
+@for(int i=0; i<=10; i++)
+{
+    <p>@i</p>
+} *@
+
+@foreach(var item in Model)
+{
+    <p>@item.Id</p>
+    <p>@item.Name</p>
+}
