@@ -17,5 +17,10 @@ namespace DataAccess.Context
         }
 
         public DbSet<About> Abouts{ get; set; }
+        public DbSet<Food> Foods{ get; set; }
+        public DbSet<FoodCategory> FoodCategories { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Team> Teams { get; set; }
     }
 }
