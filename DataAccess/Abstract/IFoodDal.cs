@@ -3,5 +3,8 @@ using Entities.TableModels;
 
 namespace DataAccess.Abstract
 {
-    public interface IFoodDal : IBaseRepository<Food> { }
+    public interface IFoodDal : IBaseRepository<Food> 
+    {
+        List<Food> GetAllFoods();
+    }
 }

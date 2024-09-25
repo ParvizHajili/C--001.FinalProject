@@ -10,27 +10,28 @@ namespace Business.Concrete
         IFoodCategoryDal _foodCategoryDal = new FoodCategoryDal();
         public void Add(FoodCategory entity)
         {
-            throw new NotImplementedException();
+            _foodCategoryDal.Add(entity);
         }
 
         public void Delete(FoodCategory entity)
         {
-            throw new NotImplementedException();
+            _foodCategoryDal.Delete(entity);
         }
 
         public List<FoodCategory> GetAll()
         {
-            throw new NotImplementedException();
+            return _foodCategoryDal.GetAll(x => x.Deleted == 0);
         }
 
         public FoodCategory GetById(int id)
         {
-            throw new NotImplementedException();
+            return _foodCategoryDal.GetById(id);
         }
 
         public void Update(FoodCategory entity)
         {
-            throw new NotImplementedException();
+            entity.LastUpdatedDate = DateTime.Now;
+            _foodCategoryDal.Update(entity);
         }
     }
 }

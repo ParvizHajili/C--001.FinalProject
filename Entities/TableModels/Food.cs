@@ -9,6 +9,6 @@ namespace Entities.TableModels
         public decimal Price { get; set; }
         public string PhotoUrl { get; set; }
         public int FoodCategoryId { get; set; }
-        public FoodCategory FoodCategory { get; set; }
+        public FoodCategory? FoodCategory { get; set; }
     }
 }

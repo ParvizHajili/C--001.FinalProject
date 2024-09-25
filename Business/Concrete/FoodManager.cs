@@ -1,13 +1,16 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
+using DataAccess.Concrete;
 using Entities.TableModels;
 
 namespace Business.Concrete
 {
     public class FoodManager : IFoodService
     {
+        IFoodDal _foodDal = new FoodDal();
         public void Add(Food entity)
         {
-            throw new NotImplementedException();
+            _foodDal.Add(entity);
         }
 
         public void Delete(Food entity)
@@ -17,17 +20,17 @@ namespace Business.Concrete
 
         public List<Food> GetAll()
         {
-            throw new NotImplementedException();
+            return _foodDal.GetAllFoods();
         }
 
         public Food GetById(int id)
         {
-            throw new NotImplementedException();
+            return _foodDal.GetById(id);
         }
 
         public void Update(Food entity)
         {
-            throw new NotImplementedException();
+            _foodDal.Update(entity);
         }
     }
 }
